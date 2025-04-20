@@ -14,4 +14,15 @@ API Monitoring System
 
   6. should return runnning if the report is being created or csv downloadable file if the report is done.  
 
-  7. exit flask by ctrl + c 
+  7. exit flask by ctrl + c
+
+Updates to the solution: 
+1. To store_monitoring.py:
+       ADD a clause in the program to compute the remaoning time for displaying the csv file.
+
+2. ADD a cache mechanism to compute restraunt active time by computing based on an a single parameter tracking mechanism of restraunt activity or inactivity.
+
+
+
+CSV File: 
+

@@ -12,6 +12,6 @@ API Monitoring System
 
   5. now if it is sucess you will get report_id copy it and past it in the place of <report_id>  curl http://127.0.0.1:5000/get_report/<report_id>
 
-  6. should return runnning if the report is being created or csv downloadable file if the report is done.
+  6. should return runnning if the report is being created or csv downloadable file if the report is done.  
 
   7. exit flask by ctrl + c 

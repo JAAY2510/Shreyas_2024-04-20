@@ -199,20 +199,20 @@ def trigger_report():
 
 @app.route('/get_report/<report_id>', methods =['GET'])
 def get_report(report_id):
-    if report_id not in REPORT_STATUS:
-        return jsonify({'error': 'Invalid report_id'}), 404
+ if report_id not in REPORT_STATUS:
+     return jsonify({'error': 'Invalid report_id'}),404
         
-    if REPORT_STATUS[report_id] == 'Running':
-        return jsonify({'status': 'Running'})
+ if REPORT_STATUS[report_id] == 'Running':
+     return jsonify({'status': ' Running'})
         
-    # Generate CSV filesh
+    #Generate CSV 
     output = io.StringIO(REPORT_OUTPUTS[report_id])
     output.seek(0)
     
     return send_file(
         io.BytesIO(output.getvalue().encode()),
-        mimetype='text/csv',
-        as_attachment=True,
+        mimetype = 'text/csv',
+        as_attachment = True,
         attachment_filename=f'report_{report_id}.csv'
     )
 
